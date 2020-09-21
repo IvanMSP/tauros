@@ -19,7 +19,7 @@ THIRDY_APPS = [
 ]
 
 OWNER_APPS = [
-
+    'accounts.apps.AccountsConfig',
 ]
 
 DJANGO_APPS = [
