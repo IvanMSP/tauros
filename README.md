@@ -11,6 +11,8 @@
 
    [sqlite3](https://www.sqlite.org/)
 
+   [Git Flow](https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow)
+
 # Install Project
 
     1. Create virtual enviroment
