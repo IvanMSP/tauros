@@ -9,7 +9,7 @@ from rest_framework.views import APIView
 from rest_framework.generics import RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
-
+from rest_framework.response import Response
 # Owner
 from reusable.response import EnvelopeResponse, EnvelopeErrorResponse
 from .serializers import UserBaseSerializer, UserUpdateSerializer, UserProfileSerializer
@@ -70,3 +70,7 @@ class UserProfile(RetrieveUpdateAPIView):
     serializer_class = UserProfileSerializer
     permission_classes = [IsAuthenticated]
     queryset = Profile.objects.all()
+
+    def get_object(self):
+        queryset = self.get_queryset()
+        return get_object_or_404(queryset, uuid=self.kwargs.get('uuid'), owner=self.request.user)
