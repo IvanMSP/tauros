@@ -72,7 +72,6 @@ class UserProfile(RetrieveUpdateAPIView):
     queryset = Profile.objects.all()
 
     def get_object(self):
-        import pudb; pudb.set_trace()
         queryset = self.get_queryset()
         obj = get_object_or_404(queryset, uuid=self.kwargs.get('uuid'), owner=self.request.user)
         return obj
