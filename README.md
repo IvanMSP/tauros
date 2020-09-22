@@ -25,14 +25,17 @@
 
     4. Install all the requirements
         `pip install -r requirements/development.txt`
-
-    5. Migrate the migrations
+    
+    5. Makemigrations [If not exists]
+        `python manage.py makemigrations`
+   	
+    6. Migrate the migrations
         `python manage.py migrate`
 
-    6. Create super user
+    7. Create super user
         `python manage.py createsuperuser`
 
-    7. run server
+    8. run server
         `python manage.py runserver`
 
     ## Note:

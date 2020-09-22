@@ -8,8 +8,6 @@ from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.generics import RetrieveUpdateAPIView
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.authtoken.models import Token
-from rest_framework.response import Response
 # Owner
 from reusable.response import EnvelopeResponse, EnvelopeErrorResponse
 from .serializers import UserBaseSerializer, UserUpdateSerializer, UserProfileSerializer
